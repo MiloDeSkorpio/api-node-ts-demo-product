@@ -6,7 +6,8 @@ dotenv.config()
 const db = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, process.env.BD_PASS, {
     host: process.env.BD_HOST,
     dialect: 'postgres',
-    models: [__dirname + '/../models/**/*.ts']
+    models: [__dirname + '/../models/**/*.ts'],
+    logging: false
   });
 
   export default db
